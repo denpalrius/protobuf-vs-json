@@ -39,6 +39,8 @@ const createProtobufPlanets = () => {
 const protobufFilePath = "./data/planets.binary";
 const protobufPlanetsBinary = createProtobufPlanets();
 
+console.log("Deserialized binary data: ", Schema.Planets.deserializeBinary(protobufPlanetsBinary).toString());
+
 writeFile(protobufFilePath, protobufPlanetsBinary);
 
 const protobufSize = getFileSize(protobufFilePath);
