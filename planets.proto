@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package planets;
+
+message Planet {
+    int32 id = 1;
+    string name = 2;
+    bool hasLife = 3;
+}
+
+message PlanetList {
+    repeated Planet planets = 1;
+}
