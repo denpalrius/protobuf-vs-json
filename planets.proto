@@ -5,9 +5,10 @@ package planets;
 message Planet {
     int32 id = 1;
     string name = 2;
-    bool hasLife = 3;
+    int32 orderFromTheSun = 3;
+    bool hasLife = 4;
 }
 
-message PlanetList {
+message Planets {
     repeated Planet planets = 1;
 }

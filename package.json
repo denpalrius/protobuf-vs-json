@@ -1,16 +1,17 @@
 {
-  "name": "protobuff",
+  "name": "protobuf-vs-json",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "proto:gen": "bash proto.sh",
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cli-table3": "^0.6.5",
     "google-protobuf": "^3.21.4"
   }
 }

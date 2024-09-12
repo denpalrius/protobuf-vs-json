@@ -1,4 +1,4 @@
-const fs = require("fs");
+const { writeFile, getFileSize } = require('./utils');
 
 const planetData = [
   { name: "Mercury", order: 1, hasLife: false },
@@ -14,19 +14,19 @@ const planetData = [
   { name: "Eris", order: 11, hasLife: false },
 ];
 
-const planets = [];
-
-planetData.forEach((planet, index) => {
-  planets.push({
+const createJsonPlanets = () => {
+  const planets = planetData.map((planet, index) => ({
     id: index + 1,
     ...planet,
-  });
-});
+  }));
+  return JSON.stringify(planets, null, 2);
+};
 
-const planetsStr = JSON.stringify(planets);
+const jsonFilePath = "./data/planets.json";
+const jsonPlanets = createJsonPlanets();
 
-console.log(planetsStr);
+writeFile(jsonFilePath, jsonPlanets);
 
-fs.writeFileSync("./data/planets.json", planetsStr);
-console.log("Planets data written to file");
+const jsonSize = getFileSize(jsonFilePath);
 
+module.exports = { filePath: jsonFilePath, size: jsonSize };
