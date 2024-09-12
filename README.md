@@ -71,14 +71,6 @@ The output will include a table displaying the file sizes and the percentage red
 
 This output helps illustrate the efficiency of Protocol Buffers in terms of file size compared to JSON.
 
-Here’s the updated Acknowledgments section with the video included:
-
----
-
-Here’s the updated Acknowledgments section with both Protocol Buffers and JSON included:
-
----
-
 ## Acknowledgments
 
 - [Protocol Buffers](https://developers.google.com/protocol-buffers)
